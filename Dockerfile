@@ -22,8 +22,11 @@ RUN apt-get update && apt-get install -y make
 RUN make ironpython-release
 ENV IRONPYTHONPATH=/usr/src/ironpython/IronLanguages/External.LCA_RESTRICTED/Languages/IronPython/27/Lib:$IRONPYTHONPATH
 
-# cURL
-RUN apt-get update && apt-get install -y curl
+# GoAccess and lxml
+RUN apt-get update && apt-get install -y goaccess libxml2-dev libxslt1-dev
+
+# cURL and wget
+RUN apt-get update && apt-get install -y curl wget
 
 WORKDIR /app
 
