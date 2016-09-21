@@ -25,8 +25,8 @@ ENV IRONPYTHONPATH=/usr/src/ironpython/IronLanguages/External.LCA_RESTRICTED/Lan
 # GoAccess and lxml
 RUN apt-get update && apt-get install -y goaccess=1:0.8.3-1 libxml2-dev libxslt1-dev
 
-# cURL and wget
-RUN apt-get update && apt-get install -y curl wget
+# cURL, wget, Varnish and Redis tools
+RUN apt-get update && apt-get install -y curl wget varnish redis-tools
 
 WORKDIR /app
 
