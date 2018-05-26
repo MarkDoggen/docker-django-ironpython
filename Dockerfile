@@ -1,4 +1,4 @@
-FROM python:3.6
+FROM django:1.8-python2
 
 # Nano
 RUN apt-get update && apt-get install -y nano
@@ -32,4 +32,4 @@ WORKDIR /app
 
 EXPOSE 8000
 
-CMD ["/sbin/init"]
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
